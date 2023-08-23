@@ -3,9 +3,10 @@
 
 # import frappe
 from frappe.model.document import Document
-from frappe.utils.telemetry import capture
+# from frappe.utils.telemetry import capture
 
 
 class CourseChapter(Document):
 	def after_insert(self):
-		capture("chapter_created", "lms")
+		# capture("chapter_created", "lms")
+		pass

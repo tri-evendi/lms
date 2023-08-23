@@ -4,7 +4,7 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
-from frappe.utils.telemetry import capture
+# from frappe.utils.telemetry import capture
 from lms.lms.utils import get_course_progress
 from ...md import find_macros
 
@@ -24,7 +24,8 @@ class CourseLesson(Document):
 			self.update_lesson_name_in_document(section)
 
 	def after_insert(self):
-		capture("lesson_created", "lms")
+		# capture("lesson_created", "lms")
+		pass
 
 	def update_lesson_name_in_document(self, section):
 		doctype_map = {"Exercise": "LMS Exercise", "Quiz": "LMS Quiz"}

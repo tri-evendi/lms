@@ -6,7 +6,7 @@ import random
 import frappe
 from frappe.model.document import Document
 from frappe.utils import cint, validate_phone_number
-from frappe.utils.telemetry import capture
+# from frappe.utils.telemetry import capture
 from lms.lms.utils import get_chapters, can_create_courses
 from ...utils import generate_slug, validate_image
 from frappe import _
@@ -45,7 +45,8 @@ class LMSCourse(Document):
 			self.send_email_to_interested_users()
 
 	def after_insert(self):
-		capture("course_created", "lms")
+		# capture("course_created", "lms")
+		pass
 
 	def send_email_to_interested_users(self):
 		interested_users = frappe.get_all(

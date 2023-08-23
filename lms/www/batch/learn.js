@@ -2,7 +2,7 @@ frappe.ready(() => {
 	this.marked_as_complete = false;
 	let self = this;
 
-	frappe.telemetry.capture("on_lesson_page", "lms");
+	// frappe.telemetry.capture("on_lesson_page", "lms");
 
 	fetch_assignments();
 

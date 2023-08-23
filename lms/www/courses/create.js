@@ -1,5 +1,5 @@
 frappe.ready(() => {
-	frappe.telemetry.capture("on_course_creation_page", "lms");
+	// frappe.telemetry.capture("on_course_creation_page", "lms");
 	$(".tags").click((e) => {
 		e.preventDefault();
 		$("#tags-input").focus();
